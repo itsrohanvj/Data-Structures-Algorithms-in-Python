@@ -21,7 +21,7 @@ class Node:
 #returns trne if the node points to another node
     def hasNext(self):
             return self.next != None
-
+#TO GET LENGTH OF LIST AND ALSO PRINT VALES
     
     def listLength(self):
         current = self.head
@@ -34,7 +34,7 @@ class Node:
             print(current.getData())
             current = current.getNext()
             
-    def inscrtAtBeginning(self,data):
+    def insertAtBeginning(self,data):
         newNode = Node()
         newNode.setData(data)
         if self.length == 0:
@@ -74,9 +74,10 @@ class Node:
                 newNode.setNext(current.getNext())
                 current.setNext(newNode)
                 self.length += 1
-
+                
+#CALLING FUNCTIONS
 n=Node()
-n.inscrtAtBeginning(4)
+n.insertAtBeginning(4)
 n.insertAtEnd(5)
 n.insertAtEnd(7)
 n.insertAtPos(1,99)
