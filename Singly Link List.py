@@ -21,7 +21,8 @@ class Node:
 #returns trne if the node points to another node
     def hasNext(self):
             return self.next != None
-#TO GET LENGTH OF LIST AND ALSO PRINT VALES
+        
+#TO GET LENGTH OF LIST AND ALSO PRINT VALUES
     
     def listLength(self):
         current = self.head
