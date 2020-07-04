@@ -5,6 +5,7 @@ class Node:
         self.next= next
         self.prev = prev
         self.head= None
+        self.length=0
     #method for setting Lhe data field or I.he node
     def setData(self,data):
         self.data =data
@@ -43,7 +44,7 @@ class Node:
             newNode.setNext(self.head)
             self.head.setPrev(newNode)
             self.head = newNode
-
+        self.length+=1
     def insertAtEnd(self,data):
         if (self.head == None): #To imply that if head ... None
             self.head == Node(data)
@@ -54,7 +55,7 @@ class Node:
                 current =current.getNext()
             current.setNext(Node(data, None, current))
             self.tail = current.getNext()
-
+        self.length+=1
     def listLength(self):         
         current = self.head
         count=0
@@ -74,25 +75,28 @@ class Node:
             if currentNode == None:
                 break
             i += 1
-            print ("The node",currentNode)
             return currentNode
     def insertAtGivenPosition(self, index, data):
-        newNode = Node(data)
-        if self.head == None or index == 0:
-            self.insertAtBeginning(data)
-        elif index > 0:
-            temp = self.getNode(index) #calls the abpve function to find node.
-            if temp == None or temp.getNext() == None:
-                self. insert(data)
-            else:
-                newNode.setNext(temp.getNext())
-                newNode.setPrev(temp)
-                temp.getNext().setPrev(newNode)
-                temp.setNext(newNode)
-                
-#RUNNING THE CODE BY CALLING THE FUCNTION.
-                
+        if index > self.length or index < 0:
+            return None
+        else:
+            newNode = Node(data)
+            if self.head == None or index == 0:
+                self.insertAtBeginning(data)
+            elif index > 0:
+                temp = self.getNode(index) #calls the abpve function to find node.
+                if temp == None or temp.getNext() == None:
+                    self. insert(data)
+                else:
+                    newNode.setNext(temp.getNext())
+                    newNode.setPrev(temp)
+                    temp.getNext().setPrev(newNode)
+                    temp.setNext(newNode)
+        self.length+=1
+        
 n=Node()
+
+n.insertAtGivenPosition(100,55995)
 n.insertAtBeginning(4)
 n.insertAtEnd(5)
 n.insertAtEnd(7)
