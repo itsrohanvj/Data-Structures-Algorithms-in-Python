@@ -89,7 +89,9 @@ class Node:
                 newNode.setPrev(temp)
                 temp.getNext().setPrev(newNode)
                 temp.setNext(newNode)
-
+                
+#RUNNING THE CODE BY CALLING THE FUCNTION.
+                
 n=Node()
 n.insertAtBeginning(4)
 n.insertAtEnd(5)
