@@ -86,7 +86,7 @@ class Node:
             elif index > 0:
                 temp = self.getNode(index) #calls the abpve function to find node.
                 if temp == None or temp.getNext() == None:
-                    self. insertAtEnd(data)
+                    self.insertAtEnd(data)
                 else:
                     newNode.setNext(temp.getNext())
                     newNode.setPrev(temp)
