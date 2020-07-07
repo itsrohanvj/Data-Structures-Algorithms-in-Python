@@ -21,8 +21,7 @@ class Node:
 #returns trne if the node points to another node
     def hasNext(self):
             return self.next != None
-        
-#TO GET LENGTH OF LIST AND ALSO PRINT VALUES
+
     
     def listLength(self):
         current = self.head
@@ -30,7 +29,10 @@ class Node:
         count=0
         while  current!=None:
             count=count+1
+            p=current.hasNext()
+            
             print(current.getData())
+            
             current = current.getNext()
             
     def insertAtBeginning(self,data):
@@ -44,13 +46,20 @@ class Node:
         self.length += 1
 
     def insertAtEnd(self,data):
-        newNode = Node()
-        newNode.setData(data)
-        current= self.head
-        while current.getNext() != None:
-            current = current.getNext()
-        current.setNext(newNode)
-        self.length+=1
+        if (self.head == None): #To imply that if head == None
+            newNode = Node()
+            newNode.setData(data)
+            self.head=newNode
+            self.length+=1
+        
+        else:
+            newNode = Node()
+            newNode.setData(data)
+            current= self.head
+            while current.getNext() != None:
+                current = current.getNext()
+            current.setNext(newNode)
+            self.length+=1
 
     def insertAtPos(self,pos,data):
         
@@ -73,13 +82,13 @@ class Node:
                 newNode.setNext(current.getNext())
                 current.setNext(newNode)
                 self.length += 1
-                
-#CALLING FUNCTIONS
+
 n=Node()
 n.insertAtBeginning(4)
 n.insertAtEnd(5)
 n.insertAtEnd(7)
 n.insertAtPos(1,99)
+n.insertAtPos(100,993333)
 
 n.listLength()
 
