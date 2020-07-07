@@ -22,7 +22,7 @@ class Node:
     def hasNext(self):
         return self.next != None
 
-#This method would be a member of other etass (say, CircularList)
+#COUNT OF LIST
     def circularListLength(self):
         currentNode = self.head
         if currentNode ==None:
@@ -34,7 +34,7 @@ class Node:
             count = count+ 1
         return count
 
-
+#PRINTING THE VALUES OF LIST
 
     def printCircularList(self):
         currentNode = self.head
@@ -44,11 +44,10 @@ class Node:
         currentNode = currentNode.getNext()
         if currentNode is not None:
             while currentNode != self.head:
-                currentNode = currentNode.getNext()
                 print (currentNode.getData())
-
-
-
+                currentNode = currentNode.getNext()
+                
+#INSERT AT THE END OF LIST
     def insertAtEndlnCLL(self, data):
         current = self.head
         newNode = Node()
@@ -65,12 +64,11 @@ class Node:
             current.setNext(newNode)
             #self.head = newNode
 
+#INSERT AT THE BEGINNING OF ILIST
     def insertAtBeginlnCLL (self, data):
         current=self.head
         newNode = Node()
         newNode.setData(data)
-        
-        #print(current.getNext())
         if current is not None:
             while  current.getNext() != self.head:
                 current = current.getNext()
@@ -85,18 +83,19 @@ class Node:
        
 
 
-
+#CALLING THE FUNCTIONS
+            
 n=Node()
 
-
-#n.insertAtBeginlnCLL(6)
+n.insertAtBeginlnCLL(1000)
 n.insertAtBeginlnCLL(7)
-a=n.circularListLength()
-#print(a)
 n.insertAtEndlnCLL(6)
-#n.insertAtBeginlnCLL(5)
+n.insertAtBeginlnCLL(5)
 n.insertAtEndlnCLL(88)
 n.insertAtEndlnCLL(99)
 
-
 n.printCircularList()
+
+count=n.circularListLength()
+print("Count of list=",count)
+
