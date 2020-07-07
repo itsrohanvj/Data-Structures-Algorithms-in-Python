@@ -42,56 +42,61 @@ class Node:
             return 0
         print(currentNode.getData())
         currentNode = currentNode.getNext()
-        if currentNode!= None:
+        if currentNode is not None:
             while currentNode != self.head:
                 currentNode = currentNode.getNext()
-            print (currentNode.getData())
+                print (currentNode.getData())
 
 
 
     def insertAtEndlnCLL(self, data):
-        current=self.head
+        current = self.head
         newNode = Node()
         newNode.setData(data)
         
-        if current!= None:
-            
-            while  current.getNext() != self.head:
-                current = current.getNext()
-            current.setNext(newNode)
+        while current.getNext() !=self.head:
+            current = current.getNext()
+               
+        newNode.setNext(newNode)
+        if self.head== None:
+            self.head =newNode;
         else:
             newNode.setNext(self.head)
             current.setNext(newNode)
-
+            #self.head = newNode
 
     def insertAtBeginlnCLL (self, data):
         current=self.head
         newNode = Node()
         newNode.setData(data)
         
-       # print(current.getNext())
+        #print(current.getNext())
         if current is not None:
             while  current.getNext() != self.head:
                 current = current.getNext()
-        
-            current.setNext(newNode)
-        
+                
+        newNode.setNext(newNode)
+        if self.head==None:
+            self.head=newNode
         else:
             newNode.setNext(self.head)
-            newNode.setNext(newNode)
-        self.head = newNode
+            current.setNext(newNode)
+            self.head = newNode
        
 
 
 
 n=Node()
+
+
+#n.insertAtBeginlnCLL(6)
+n.insertAtBeginlnCLL(7)
+a=n.circularListLength()
+#print(a)
+n.insertAtEndlnCLL(6)
 #n.insertAtBeginlnCLL(5)
+n.insertAtEndlnCLL(88)
+n.insertAtEndlnCLL(99)
 
-n.insertAtBeginlnCLL(6)
-n.insertAtBeginlnCLL(7883830)
 
-
-n.insertAtBeginlnCLL(700)
-#n.insertAtEndlnCLL(990)
-#n.insertAtEndlnCLL(6)
 n.printCircularList()
