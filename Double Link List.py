@@ -45,6 +45,7 @@ class Node:
             self.head.setPrev(newNode)
             self.head = newNode
         self.length+=1
+        
     def insertAtEnd(self,data):
         if (self.head == None): #To imply that if head ... None
             self.head == Node(data)
@@ -56,6 +57,8 @@ class Node:
             current.setNext(Node(data, None, current))
             self.tail = current.getNext()
         self.length+=1
+        
+        # PRINTING VALUES OF LIST
     def listLength(self):         
         current = self.head
         count=0
@@ -76,6 +79,8 @@ class Node:
                 break
             i += 1
         return currentNode
+    
+    
     def insertAtGivenPosition(self, index, data):
         if index > self.length or index < 0:
             return None
@@ -93,7 +98,7 @@ class Node:
                     temp.getNext().setPrev(newNode)
                     temp.setNext(newNode)
         self.length+=1
-        
+ #CALLING FUNCTIONS  
 n=Node()
 
 n.insertAtGivenPosition(100,55995)
