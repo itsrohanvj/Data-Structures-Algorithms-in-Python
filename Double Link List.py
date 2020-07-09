@@ -69,13 +69,13 @@ class Node:
         currentNode = self.head
         if currentNode == None:
             return None
-        i = 0
+        i = 1
         while i < index and currentNode.getNext() is not None:
             currentNode =currentNode.getNext()
             if currentNode == None:
                 break
             i += 1
-            return currentNode
+        return currentNode
     def insertAtGivenPosition(self, index, data):
         if index > self.length or index < 0:
             return None
@@ -84,7 +84,7 @@ class Node:
             if self.head == None or index == 0:
                 self.insertAtBeginning(data)
             elif index > 0:
-                temp = self.getNode(index) #calls the abpve function to find node.
+                temp = self.getNode(index) #calls the above function to find node.
                 if temp == None or temp.getNext() == None:
                     self.insertAtEnd(data)
                 else:
@@ -101,7 +101,7 @@ n.insertAtBeginning(4)
 n.insertAtEnd(5)
 n.insertAtEnd(7)
 n.insertAtBeginning(99)
-n.insertAtGivenPosition(2,555)
+n.insertAtGivenPosition(4,555)
 
 n.listLength()
 
