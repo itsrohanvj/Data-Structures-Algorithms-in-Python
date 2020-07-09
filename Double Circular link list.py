@@ -132,7 +132,7 @@ class Node:
 #CALLING THE FUNCTIONS             
 n=Node()
 
-n.insertAtEndlnCLL("ROHAN")
+n.insertAtEndlnCLL("STRING VALUE")
 n.insertAtBeginlnCLL(4989898989)
 n.insertAtEndlnCLL(22222)
 n.insertAtBeginlnCLL(99)
