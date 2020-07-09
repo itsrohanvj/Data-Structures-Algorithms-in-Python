@@ -22,7 +22,7 @@ class Node:
     def hasNext(self):
             return self.next != None
 
-    
+    # FUNCTION TO PRINT ALL THE VALUES OF LINK LIST.
     def listLength(self):
         current = self.head
         
