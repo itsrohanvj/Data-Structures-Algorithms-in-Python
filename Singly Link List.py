@@ -1,4 +1,4 @@
-    #Node of a Singly Linked List
+#Node of a Singly Linked List
 class Node:
 #constructor
     def __init__ (self):
@@ -18,11 +18,11 @@ class Node:
 #method for getting the next field of the node
     def getNext(self):
             return self.next
-#returns trne if the node points to another node
+#returns true if the node points to another node
     def hasNext(self):
             return self.next != None
 
-    
+    # FUNCTION TO PRINT ALL THE VALUES OF LINK LIST.
     def listLength(self):
         current = self.head
         
@@ -83,6 +83,7 @@ class Node:
                 current.setNext(newNode)
                 self.length += 1
 
+#CALLING OF FUNCTIONS                 
 n=Node()
 n.insertAtBeginning(4)
 n.insertAtEnd(5)
@@ -90,7 +91,7 @@ n.insertAtEnd(7)
 n.insertAtPos(1,99)
 n.insertAtPos(100,993333)
 
-n.listLength()
+n.listLength() #PRINTING VALUES
 
 
 
