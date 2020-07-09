@@ -47,7 +47,7 @@ class Node:
 
     def insertAtEnd(self,data):
         if (self.head == None): #To imply that if head == None
-            newNode = Node()
+            newNode = Node() # alternative : self.insertAtBeginning(data)
             newNode.setData(data)
             self.head=newNode
             self.length+=1

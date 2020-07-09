@@ -5,7 +5,7 @@ class Node:
         self.data= None
         self.next = None
         self.head=None
-        self.length=0
+        self.count=0
     #method for setting the data field of the node
     def setData(self,data):
         self.data= data
@@ -27,12 +27,12 @@ class Node:
         currentNode = self.head
         if currentNode ==None:
             return 0
-        count =1
+        self.count =1
         currentNode = currentNode.getNext()
         while currentNode != self.head:
             currentNode = currentNode.getNext()
-            count = count+ 1
-        return count
+            self.count = self.count+ 1
+        return self.count
 
 #PRINTING THE VALUES OF LIST
 
@@ -80,22 +80,35 @@ class Node:
             newNode.setNext(self.head)
             current.setNext(newNode)
             self.head = newNode
-       
 
-
+#INSERT AT A PARTICULAR POSITION
+    def  insertAtPos(self,pos,data):
+        if pos==0:
+            self.insertAtBeginlnCLL(data)
+        elif pos>self.count or pos<0:
+            print("Wrong Positional value")
+        else:
+            current=self.head
+            newNode = Node()
+            newNode.setData(data)
+            for i in range(0,pos-2):
+                current = current.getNext()
+            newNode.setNext(current.getNext())
+            current.setNext(newNode)
 #CALLING THE FUNCTIONS
             
 n=Node()
 
-n.insertAtBeginlnCLL(1000)
+n.insertAtBeginlnCLL(657)
 n.insertAtBeginlnCLL(7)
 n.insertAtEndlnCLL(6)
 n.insertAtBeginlnCLL(5)
 n.insertAtEndlnCLL(88)
 n.insertAtEndlnCLL(99)
 
+n.circularListLength() #this function is called twice because the count is done after adding all the nodes.
+n.insertAtPos(4,1000) # the above count is used to find the position.
+count=n.circularListLength() # alternative of above: use counter variable after adding every node
 n.printCircularList()
-
-count=n.circularListLength()
 print("Count of list=",count)
 
