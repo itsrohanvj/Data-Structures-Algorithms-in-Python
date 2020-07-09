@@ -1,4 +1,4 @@
-#Node of a Circulur Linked List
+#Node of a Circular Linked List
 class Node:
 #constructor
     def __init__(self):
@@ -6,19 +6,19 @@ class Node:
         self.next = None
         self.head=None
         self.length=0
-    #melhod for setting the data field of the node
+    #method for setting the data field of the node
     def setData(self,data):
         self.data= data
     #method for getting the data field of the node
     def getData(self):
         return self.data
-    #melhod for setting the next field of the node
+    #method for setting the next field of the node
     def setNext(self,next):
         self.next= next
-    #method for getting Lhc next field of the node
+    #method for getting the next field of the node
     def getNext(self):
         return self.next
-    #returns true if Lhc node points to anolher node
+    #returns true if the node points to another node
     def hasNext(self):
         return self.next != None
 
@@ -64,7 +64,7 @@ class Node:
             current.setNext(newNode)
             #self.head = newNode
 
-#INSERT AT THE BEGINNING OF ILIST
+#INSERT AT THE BEGINNING OF LIST
     def insertAtBeginlnCLL (self, data):
         current=self.head
         newNode = Node()
