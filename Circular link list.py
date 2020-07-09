@@ -119,7 +119,7 @@ n=Node()
 n.insertAtEndlnCLL(88)
 n.insertAtBeginlnCLL(657)
 n.insertAtBeginlnCLL(299)
-n.insertAtBeginlnCLL(0000)
+n.insertAtBeginlnCLL(9999990000)
 n.insertAtBeginlnCLL(55555)
 
 n.insertAtBeginlnCLL(300)
