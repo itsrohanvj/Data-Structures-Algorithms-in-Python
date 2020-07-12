@@ -49,8 +49,8 @@ class Queue(object):
         return self.size  
     
 #Calling the functions and inserting values.    
-
 que = Queue()
+
 #pushing values in Queue
 que.enQueue("first")
 print ("Front: "+que.queueFront())
@@ -70,6 +70,6 @@ print ("Front: "+que.queueFront())
 print ("Rear: "+que.queueRear())
 
 que.deQueue()
-print ("f'ront: "+que.queueFront())
+print ("Front: "+que.queueFront())
 print ("Rear: "+que.queueRear())
 
