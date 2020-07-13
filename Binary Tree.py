@@ -34,8 +34,6 @@ class Queue:
     def isEmpty(self):
         return self.size < 0
     def enQueue(self, item):
-        
-        
         if self.size >= self.limit:
             print ('Queue Overflow!')
             return
@@ -46,9 +44,7 @@ class Queue:
         else:
             self.rear = self.size
         self.size += 1
-        
         return self.que
-
         
     def deQueue(self):
         if self.size>0:
@@ -60,9 +56,7 @@ class Queue:
                 self.rear = self.size-1
            # print(p.data)
             return p
-            
-    
-
+           
         # Insert using level order traversal
 def insertInBinaryTreeUsingLevelOrder(root, data):
     newNode = BinaryTree(data)
