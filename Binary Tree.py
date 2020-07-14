@@ -1,3 +1,4 @@
+#NODE DECLARATION
 class BinaryTree:
     def __init__ (self, data):
         self.data = data
@@ -22,7 +23,7 @@ class BinaryTree:
     def isEmpty(self):
             return self.size == 0
 
-
+# USING QUEUE 
 class Queue:
     def __init__(self, limit=1000):
         self.que = []
@@ -33,8 +34,6 @@ class Queue:
     def isEmpty(self):
         return self.size < 0
     def enQueue(self, item):
-        
-        
         if self.size >= self.limit:
             print ('Queue Overflow!')
             return
@@ -45,9 +44,7 @@ class Queue:
         else:
             self.rear = self.size
         self.size += 1
-        
         return self.que
-
         
     def deQueue(self):
         if self.size>0:
@@ -59,10 +56,8 @@ class Queue:
                 self.rear = self.size-1
            # print(p.data)
             return p
-            
-    
-
-        # Insert using level order traversal
+           
+  # Insert using level order traversal
 def insertInBinaryTreeUsingLevelOrder(root, data):
     newNode = BinaryTree(data)
     if root is None:
@@ -86,6 +81,7 @@ def insertInBinaryTreeUsingLevelOrder(root, data):
             node.right = newNode
             return root
 
+ #PRINTING VALUES IN THE TREE-LEVEL ORDER TRAVERSAL.
 def levelOrder (root):
     Q = Queue()
     
@@ -103,6 +99,7 @@ def levelOrder (root):
             if(temp.right): 
                     Q.enQueue(temp.right)
 
+#CALLING FUNCTIONS AND INSERTING VALUES.   
 root=BinaryTree(10)
 root = insertInBinaryTreeUsingLevelOrder(root,11)
 root = insertInBinaryTreeUsingLevelOrder(root,9)
@@ -111,9 +108,7 @@ root = insertInBinaryTreeUsingLevelOrder(root, 8)
 root = insertInBinaryTreeUsingLevelOrder(root, 12)
 root = insertInBinaryTreeUsingLevelOrder(root, 225)
 
-
-
-levelOrder(root)
+levelOrder(root) #PRINTING VALUE
 
 
 
