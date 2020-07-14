@@ -57,7 +57,7 @@ class Queue:
            # print(p.data)
             return p
            
-        # Insert using level order traversal
+  # Insert using level order traversal
 def insertInBinaryTreeUsingLevelOrder(root, data):
     newNode = BinaryTree(data)
     if root is None:
@@ -110,7 +110,7 @@ root = insertInBinaryTreeUsingLevelOrder(root, 8)
 root = insertInBinaryTreeUsingLevelOrder(root, 12)
 root = insertInBinaryTreeUsingLevelOrder(root, 225)
 
-levelOrder(root)
+levelOrder(root) #PRINTING VALUE
 
 
 
