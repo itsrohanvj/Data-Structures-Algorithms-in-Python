@@ -14,13 +14,10 @@ def LevelOrder(root, data):
         return root
     q = []  #QUEUE
     q.append(root)
-    z=root
     node = None
     
     while  len(q)>0:
-        
         node=q.pop(0)
-        
         if data== node.data:
             return root
         if node.left is not None:
