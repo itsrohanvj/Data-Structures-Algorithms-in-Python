@@ -73,7 +73,7 @@ def insertInBinaryTreeUsingLevelOrder(root, data):
     node = None
     while not q.isEmpty():
         node = q.deQueue()
-        if data== node.getData():
+        if data== node.getData():  
              return root
         if node.left is not None:
             q.enQueue(node.left)
@@ -105,9 +105,7 @@ def levelOrder (root):
 
 root=BinaryTree(10)
 root = insertInBinaryTreeUsingLevelOrder(root,11)
-
 root = insertInBinaryTreeUsingLevelOrder(root,9)
-
 root = insertInBinaryTreeUsingLevelOrder(root, 15)
 root = insertInBinaryTreeUsingLevelOrder(root, 8)
 root = insertInBinaryTreeUsingLevelOrder(root, 12)
