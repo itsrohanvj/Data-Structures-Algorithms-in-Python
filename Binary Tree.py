@@ -1,4 +1,6 @@
 #NODE DECLARATION
+
+# THE COMPLETE CODE IS WRITTEN IN DETAILED WAY
 class BinaryTree:
     def __init__ (self, data):
         self.data = data
