@@ -20,7 +20,7 @@ def insertNode(root, node):
             else:
                 insertNode(root.right, node)
 
-
+#FINDING THE VALUE
 def find(root, data):
     currentNode = root
     while currentNode:
@@ -32,7 +32,7 @@ def find(root, data):
             currentNode = currentNode.right
     return None
 
-
+#INSERTING VALUES
 r = Node(50)
 insertNode(r, Node(30))
 insertNode(r, Node(20))
@@ -41,5 +41,5 @@ insertNode(r, Node(70))
 insertNode(r, Node(60))
 insertNode(r, Node(80))
 
-p=find(r,20)
-print("Found=",p)
+output=find(r,20)
+print("Found=",output)
