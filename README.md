@@ -4,3 +4,4 @@
 <br>Queues
 <br>Linked list
 <br>Trees
+<br>Graphs
