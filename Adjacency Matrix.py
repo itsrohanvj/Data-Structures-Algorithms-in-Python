@@ -29,14 +29,14 @@ class Graph:
         self.vertices = []
         for i in range(0, numVertices):
             newVertex = Vertex(i)
-         #   print(newVertex)
+         
             self.vertices.append(newVertex)
-           # print("bye=",self.vertices)
+           
 
     def setVertex(self, vtx, id):
         if 0 <= vtx < self.numVertices:
             self.vertices[vtx].setVertexID(id)
-          #  print("hey=",self.vertices)
+          
 
     def getVertex(self, n):
         for vertxin in range(0, self.numVertices):
@@ -48,7 +48,7 @@ class Graph:
        
         if self.getVertex(frm) != -1 and self.getVertex(to) != -1:
             self.adjMatrix[self.getVertex(frm)][self.getVertex(to)] = cost
-            # For directed graph do not add this
+            # For directed graph comment out the following line.
             self.adjMatrix[self.getVertex(to)][self.getVertex(frm)] = cost
          
 		
