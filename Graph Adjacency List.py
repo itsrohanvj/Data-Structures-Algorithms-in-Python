@@ -83,7 +83,8 @@ class Graph:
                     wid = w.getVertexID()
                     edges.append((vid, wid, v.getWeight(w)))
         return edges
-    
+
+    #CALLING THE FUNCTIONS.
 if __name__ == '__main__':
 
     G = Graph()
