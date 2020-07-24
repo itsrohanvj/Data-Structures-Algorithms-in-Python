@@ -63,8 +63,8 @@ class Graph:
             self.addVertex(to)
 
         self.vertDictionary[frm].addNeighbor(self.vertDictionary[to], cost)
-	# For directed graph do not add this
-        #self.vertDictionary[to].addNeighbor(self.vertDictionary[frm], cost)
+	# For directed graph do not add the following line.
+        self.vertDictionary[to].addNeighbor(self.vertDictionary[frm], cost)
 
     def getVertices(self):
         return self.vertDictionary.keys()
@@ -83,7 +83,8 @@ class Graph:
                     wid = w.getVertexID()
                     edges.append((vid, wid, v.getWeight(w)))
         return edges
-    
+
+    #CALLING THE FUNCTIONS.
 if __name__ == '__main__':
 
     G = Graph()
