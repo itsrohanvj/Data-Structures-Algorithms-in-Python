@@ -67,7 +67,7 @@ class Node:
             return None
         else:
             if pos == 0:
-                self.insertAtBeg(data)
+                self.insertAtBeginning(data)
             else:
                 if pos ==self.length :
                     self.insertAtEnd(data)
