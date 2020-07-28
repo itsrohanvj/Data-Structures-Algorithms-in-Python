@@ -106,7 +106,7 @@ n.insertAtBeginning(4)
 n.insertAtEnd(5)
 n.insertAtEnd(7)
 n.insertAtBeginning(99)
-n.insertAtGivenPosition(4,555)
+n.insertAtGivenPosition(1,555)
 
 n.listLength()
 
