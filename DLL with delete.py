@@ -65,7 +65,6 @@ class Node:
         count=0
         while  current!=None:
             count=count+1
-            p=current.hasNext()
             print(current.getData())
             current = current.getNext()
         print("count=",count)
