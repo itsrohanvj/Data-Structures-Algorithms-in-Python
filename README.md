@@ -5,3 +5,5 @@
 <br>Linked list
 <br>Trees
 <br>Graphs
+
+<br> All codes are written using getter and setter method/function for easy code readability. 
