@@ -138,6 +138,7 @@ class Node:
                     break
                 i += 1
             return currentNode
+
     def deleteAtGivenPosition(self, index):
         temp = self.gettNode(index)
         if temp :

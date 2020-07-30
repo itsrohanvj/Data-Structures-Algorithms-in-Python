@@ -107,7 +107,7 @@ class Node:
             
             if currentNode == None:
                 return None
-            i = 1
+            i = 2
             while i <index and currentNode.getNext() is not self.head:
                 currentNode =currentNode.getNext()
                 if currentNode == None:
@@ -116,9 +116,11 @@ class Node:
             return currentNode
     def  insertAtPos(self,pos,data):
         z=self.circularListLength()
-        if pos==0:
+        if pos==1:
             self.insertAtBeginlnCLL(data)
-        elif pos>z or pos<0:
+        elif pos==z+1:
+            self.insertAtEndlnCLL(data)
+        elif pos>z or pos<1:
             print("Wrong Positional value , data passed=",data)
         else:
             temp=self.getNode(pos) # calling of above function to find node.
@@ -138,7 +140,7 @@ n.insertAtEndlnCLL(22222)
 n.insertAtBeginlnCLL(99)
 n.insertAtBeginlnCLL(9999999)
 n.insertAtBeginlnCLL(99999111)
-n.insertAtPos(5,6767676767)
+n.insertAtPos(7,6767676767)
 
 n.printCircularList()
 
