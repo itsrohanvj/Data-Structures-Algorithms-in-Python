@@ -5,6 +5,7 @@ class Node:
         self.next= next
         self.prev = prev
         self.head= None
+        self.tail=None
         self.length=0
     #method for setting Lhe data field or I.he node
     def setData(self,data):
@@ -67,7 +68,7 @@ class Node:
             p=current.hasNext()
             print(current.getData())
             current = current.getNext()
-
+        print("count=",count)
     def getNode(self, index):
         currentNode = self.head
         if currentNode == None:
@@ -82,11 +83,11 @@ class Node:
     
     
     def insertAtGivenPosition(self, index, data):
-        if index > self.length or index < 0:
+        if index > self.length or index < 1:
             return None
         else:
             newNode = Node(data)
-            if self.head == None or index == 0:
+            if self.head == None or index == 1:
                 self.insertAtBeginning(data)
             elif index > 0:
                 temp = self.getNode(index) #calls the above function to find node.
@@ -99,17 +100,40 @@ class Node:
                     temp.setNext(newNode)
         self.length+=1
 
+    def deleteBeg(self):
+        if self.length == 0:
+            print("The list is empty")
+        else:
+            self.head = self.head.next
+            self.head.setPrev(None)
+            self.length -= 1
 
+    # method to delete the last node of the linked list
+    def deleteLast(self):
+
+        if self.length == 0:
+            print("The list is empty")
+        else:
+            currentnode = self.head
+            previousnode = self.head
+
+            while currentnode.next != None:
+                previousnode = currentnode
+                currentnode = currentnode.next
+            self.tail=previousnode
+            previousnode.next = None
+
+            self.length -= 1
 #at position
     def gettNode(self, index):
-        if index>self.length or index<0:
+        if index>self.length or index<1:
             return
         else:
             currentNode = self.head
             if currentNode == None:
                 return None
             i=1
-            while i <= index:
+            while i < index:
                 currentNode = currentNode.getNext()
                 if currentNode == None:
                     break
@@ -118,10 +142,15 @@ class Node:
     def deleteAtGivenPosition(self, index):
         temp = self.gettNode(index)
         if temp :
-            temp.getPrev().setNext(temp.getNext())
-            if temp.getNext():
+            if temp ==self.head:
+                self.deleteBeg()
+            elif temp==self.tail:
+                self.deleteLast()
+            else:
+                temp.getPrev().setNext(temp.getNext())
+                if temp.getNext():
                 
-                temp.getNext().setPrev(temp.getPrev())
+                    temp.getNext().setPrev(temp.getPrev())
             temp.setPrev(None)
             temp.setNext(None)
             temp.setData(None)
@@ -140,9 +169,7 @@ class Node:
                     #otherwise we have no prev (it's None), head is the next one, and prev becomes None
                     self.head = temp.getNext()
                     temp.getNext().setPrev(None)
-            
-                    
-                   
+
             temp = temp.getNext()
         if temp.getNext() is None and data==self.tail.data:
             temp.getPrev().setNext(None)
@@ -160,10 +187,9 @@ n.insertAtGivenPosition(1,555)
 
 n.listLength()
 
-
-
 print("\nAfter Delete\n")
-n.deleteWithData(99)
+n.deleteAtGivenPosition(3)
+n.deleteWithData(5)
 n.listLength()
 
 
