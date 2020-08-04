@@ -1,5 +1,5 @@
 def heapSort(A):
-    # convert A to heap
+    # convert Array to heap
     length = len(A) - 1
     leastParent = length // 2
     for i in range(leastParent, -1, -1):
@@ -38,5 +38,5 @@ def swap(A, x, y):
 
 
 A = [534, 246, 933, 127, 277, 321, 454, 565, 220]
-print(heapSort(A))
+print(heapSort(A))  # it will print none since all the elements are removed from heap.
 print(A)
