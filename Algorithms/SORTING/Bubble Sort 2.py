@@ -1,3 +1,5 @@
+# OPTIMISED BUBBLE SORT.
+
 def BubbleSort(A):
     swapped = 1
     for i in range(len(A)):
