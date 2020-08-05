@@ -1,3 +1,4 @@
+#OPTIMISED IN A PYTHONIC WAY
 def quickSort(A,low,high):
    if low >= high:
     return
