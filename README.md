@@ -1,4 +1,4 @@
-# Data-Structures-in-Python
+## Data Structures & Algorithms in Python.
 ⚡ All important Data Structures implemented in Python.
 <br>Stack
 <br>Queues
