@@ -34,5 +34,5 @@ def KMP(text, pattern):
                 i += 1
     return
 
-
+#calling function
 KMP("bacbabababacaca", "ac")
