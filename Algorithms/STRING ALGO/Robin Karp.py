@@ -44,5 +44,6 @@ class Hash:
     def text(self):
         return self.str[self.init:self.end]
 
+# calling function 
 
 print(RobinKarp("WARGIA VIJAY ROHAN", "ROHAN"))
