@@ -134,8 +134,7 @@ def topologicalSort(G):
     # Printing the topological order
     while len(topologicalList):
         node = topologicalList.pop(0)
-        print
-        node.getVertexID()
+        print(node.getVertexID())
 
 
 if __name__ == '__main__':
