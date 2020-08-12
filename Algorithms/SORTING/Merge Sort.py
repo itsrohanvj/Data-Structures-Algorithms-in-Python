@@ -30,3 +30,4 @@ def MergeSort(A):
 A = [534, 246, 933, 127, 277, 321, 454, 565, 220]
 MergeSort(A)
 print(A)
+#PRINT

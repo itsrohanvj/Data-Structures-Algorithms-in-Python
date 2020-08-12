@@ -1,12 +1,9 @@
 import sys
-
-
 class TrieNode:
 
     def __init__(self):
         self.word = None
         self.letter = [None for i in range(26)]
-
 
 class Trie:
     def __init__(self):
@@ -43,7 +40,6 @@ class Trie:
                 self.count = self.count + 1
                 return self.recSearch(r.letter[i], word, place + 1, length)
 
-
 def tester():
     f = "This is a test sentence"
     x = f.split()
@@ -65,6 +61,7 @@ def tester():
             w = input("Enter a word ")
             w = w.upper()
 
-
 if __name__ == '__main__':
     tester()
+
+    #print

@@ -11,7 +11,6 @@ def heapSort(A):
             swap(A, 0, i)
             percolateDown(A, 0, i - 1)
 
-
 # Modfied percolateDown to skip the sorted elements
 def percolateDown(A, first, last):
     largest = 2 * first + 1
@@ -19,7 +18,6 @@ def percolateDown(A, first, last):
         # right child exists and is larger than left child
         if (largest < last) and (A[largest] < A[largest + 1]):
             largest += 1
-
         # right child is larger than parent
         if A[largest] > A[first]:
             swap(A, largest, first)
@@ -27,16 +25,17 @@ def percolateDown(A, first, last):
             first = largest;
             largest = 2 * first + 1
         else:
-
             return  # force exit
-
 
 def swap(A, x, y):
     temp = A[x]
     A[x] = A[y]
     A[y] = temp
 
-
+#CALLING FUNCTION
 A = [534, 246, 933, 127, 277, 321, 454, 565, 220]
 print(heapSort(A))  # it will print none since all the elements are removed from heap.
 print(A)
+
+#PRINT DONE
+

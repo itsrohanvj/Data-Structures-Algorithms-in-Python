@@ -2,16 +2,13 @@ def prefixTable(pattern):
     m = len(pattern)
     F = [0] * m
     k = 0
-    print(F,k,pattern[0])
     for q in range(1, m):
         while k > 0 and pattern[k] != pattern[q]:
             k = F[k - 1]
         if pattern[k] == pattern[q]:
             k = k + 1
         F[q] = k
-        print(F,k ,pattern[q])
     return F
-
 
 def KMP(text, pattern):
     n = len(text)
@@ -35,4 +32,5 @@ def KMP(text, pattern):
     return
 
 #calling function
-KMP("bacbabababacaca", "ac")
+KMP("ROHAN VIJAY ROHAN", "ROHAN")
+#PRINT

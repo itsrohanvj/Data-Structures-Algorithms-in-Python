@@ -162,3 +162,4 @@ if __name__ == '__main__':
     print('Graph data:')
     print(G.getEdges())
     topologicalSort(G)
+#PRINT

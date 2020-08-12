@@ -78,5 +78,6 @@ class Trie(object):
 
 c=Trie()
 c.addWord("this")
-c.getWordList("is")
+c.addWord("COMPUTER")
+c.getWordList("for")
 c.getWordList("is")

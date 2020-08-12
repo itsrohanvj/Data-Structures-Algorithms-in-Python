@@ -52,7 +52,6 @@ class HashTable:
     def __setitem__(self, key, data):
         self.put(key, data)
 
-
 H = HashTable()
 H[11]="First?"
 H[54] = "books"

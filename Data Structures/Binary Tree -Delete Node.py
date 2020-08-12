@@ -118,7 +118,6 @@ if __name__ == '__main__':
     root=insertNode(root,7)
     root=insertNode(root,6)
 
-
     print("\n The tree before the deletion (printing inorder):")
     inorder(root)
     print("\n LEVEL ORDER \n")
@@ -126,8 +125,6 @@ if __name__ == '__main__':
 
     key = 2 # value to be deleted from tree
     root = deletion(root, key)
-
-    #THE DELETED NODE '8' WILL BE REPLACED BY RIGHT MOST NODE WHICH IS '6' HERE.
 
     print("\nThe tree after the deletion(printing inorder):")
     inorder(root)

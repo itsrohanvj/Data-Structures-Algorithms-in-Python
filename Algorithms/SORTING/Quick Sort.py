@@ -1,4 +1,3 @@
-
 def QuickSort(A, low, high):
     if low < high:
         pivot = Partition(A, low, high)
@@ -26,3 +25,4 @@ def swap(A, x, y):
 A = [534, 246, 933, 127, 277, 321, 454, 565, 220]
 QuickSort(A, 0, len(A) - 1)
 print(A)
+#PRINT

@@ -31,12 +31,10 @@ class Graph:
             newVertex = Vertex(i)
          
             self.vertices.append(newVertex)
-           
 
     def setVertex(self, vtx, id):
         if 0 <= vtx < self.numVertices:
             self.vertices[vtx].setVertexID(id)
-          
 
     def getVertex(self, n):
         for vertxin in range(0, self.numVertices):
@@ -50,8 +48,7 @@ class Graph:
             self.adjMatrix[self.getVertex(frm)][self.getVertex(to)] = cost
             # For directed graph comment out the following line.
             self.adjMatrix[self.getVertex(to)][self.getVertex(frm)] = cost
-         
-		
+
     def getVertices(self):
         vertices = []
         for vertxin in range(0, self.numVertices):

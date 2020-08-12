@@ -1,23 +1,14 @@
 NO_OF_CHARS = 256
-
-
 def getNextState(pat, M, state, x):
-    '''
-    calculate the next state
-    '''
-
+    #calculate the next statE
     # If the character c is same as next character
     # in pattern, then simply increment state
-
     if state < M and x == ord(pat[state]):
         return state + 1
-
     i = 0
     # ns stores the result which is next state
-
     # ns finally contains the longest prefix
     # which is also suffix in "pat[0..state-1]c"
-
     # Start from the largest possible value and
     # stop when you find a prefix which is also suffix
     for ns in range(state, 0, -1):
@@ -29,7 +20,6 @@ def getNextState(pat, M, state, x):
             if i == ns - 1:
                 return ns
     return 0
-
 
 def computeTF(pat, M):
     '''
@@ -48,7 +38,6 @@ def computeTF(pat, M):
 
     return TF
 
-
 def search(pat, txt):
     '''
     Prints all occurrences of pat in txt
@@ -65,13 +54,10 @@ def search(pat, txt):
         if state == M:
             print("Pattern found at index: {}". \
                   format(i - M + 1))
-
-        # Driver program to test above function
-
-
+#MAIN FUNCTION
 def main():
     txt = "AABAACAADAABAAABAA"
-    pat = "AABA"
+    pat = "AA"
     search(pat, txt)
 
 

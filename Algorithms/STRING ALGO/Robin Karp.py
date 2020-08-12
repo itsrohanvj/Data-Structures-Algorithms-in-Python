@@ -16,18 +16,14 @@ def RobinKarp(text, pattern):
             if hashText.text() == pattern:
                 return i
         hashText.update()
-
     return -1
-
 
 class Hash:
     def __init__(self, text, size):
         self.str = text
         self.hash = 0
-
         for i in range(0, size):
             self.hash += ord(self.str[i])
-
         self.init = 0
         self.end = size
 
@@ -43,7 +39,5 @@ class Hash:
 
     def text(self):
         return self.str[self.init:self.end]
-
-# calling function 
-
-print(RobinKarp("WARGIA VIJAY ROHAN", "ROHAN"))
+# calling function
+print(RobinKarp("ROHAN VIJAY ROHAN", "ROHAN"))
