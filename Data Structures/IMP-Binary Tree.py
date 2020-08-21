@@ -197,6 +197,7 @@ def areStructurullySameTrees(root1, root2):
 	return left and right
 
 #-------------------------------------------------------
+#to find diameter of tree
 def findMaxLen(root):
     nMaxLen = 0
     if (root == None):
