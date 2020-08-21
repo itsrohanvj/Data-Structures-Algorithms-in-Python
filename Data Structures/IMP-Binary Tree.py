@@ -83,6 +83,7 @@ def levelOrderTraversalInReverse(root):
         print(s.pop().get_data())
 
 #-----------------------------------------
+#height of binarytree
 def maxDepth(root):
 	if root == None:
 	    return 0
