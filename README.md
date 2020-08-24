@@ -11,7 +11,7 @@
 <br>Sorting
 <br>Searching
 <br>String Matching
-<br>Graph ALgorithms
+<br>Graph Algorithms
 
 
 #### <br> All DS codes are written using getter and setter method/function for easy code readability. 
