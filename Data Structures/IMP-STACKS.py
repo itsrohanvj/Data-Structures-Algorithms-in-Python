@@ -18,7 +18,7 @@ def removeAdjacentDuplicates(str):
     print str
 removeAdjacentDuplicates(['6', '2', '4', '1', '2', '1', '2', '2', '1'])
 
-#-------------------------------------####################
+#----------------------------------------------------------------
 #REVERSE STACK RECURRSIVELY
 def reverseStack(stack):
     def reverseStackRecursive(stack, newStack=Stack()):
