@@ -32,5 +32,5 @@ def KMP(text, pattern):
     return
 
 #calling function
-KMP("ROHAN VIJAY ROHAN", "ROHAN")
+print (KMP("ROHAN VIJAY ROHAN", "ROHAN"))
 
