@@ -59,6 +59,7 @@ if g.isCyclic():
     print("Graph contains cycle")
 else:
     print("Graph does not contain cycle ")
+    
 g1 = Graph(3)
 g1.addEdge(0, 1)
 g1.addEdge(1, 2)
