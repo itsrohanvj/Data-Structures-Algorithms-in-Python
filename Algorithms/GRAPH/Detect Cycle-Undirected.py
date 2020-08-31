@@ -1,6 +1,5 @@
 from collections import defaultdict
 
-
 # This class represents a undirected graph using adjacency list representation
 class Graph:
 
