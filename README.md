@@ -14,4 +14,4 @@
 <br>Graph Algorithms
 
 
-#### <br> All codes are written using getter and setter method/function for easy code readability. 
+#### <br> All DS codes are written using getter and setter method/function for easy code readability. 
