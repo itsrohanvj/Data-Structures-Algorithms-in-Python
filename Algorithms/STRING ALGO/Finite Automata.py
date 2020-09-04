@@ -1,3 +1,4 @@
+#credit : GFG
 NO_OF_CHARS = 256
 def getNextState(pat, M, state, x):
     #calculate the next statE
